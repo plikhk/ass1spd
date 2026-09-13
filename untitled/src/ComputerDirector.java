@@ -8,4 +8,11 @@ public class ComputerDirector{
                 .setStorage(4000)
                 .setCooling(CoolingType.LIQUID_COOLING);
     }
+    // метод для обычного рабочего компа
+    public void constructCallCenterTerminal(ComputerBuilder builder) {
+        builder.setCpu("Intel Core i3-12100")
+                .setRam(8)
+                .setStorage(256);
+        // видюха и кулер сами подтянутся из дефолтных
+    }
 }
