@@ -7,5 +7,10 @@ public abstract class ComputerBuilder{
     protected int storageGb;
     protected CoolingType cooling = CoolingType.STOCK_AIR; // базовое охлаждение для всех
 
+    // каждый сеттер возвращает this, это тот самый fluent api
+    public ComputerBuilder setCpu(String cpu) {
+        this.cpu = cpu;
+        return this;
+    }
 
 }
