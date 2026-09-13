@@ -10,4 +10,17 @@ public class OfficeComputerBuilder extends ComputerBuilder{
         this.cooling = CoolingType.STOCK_AIR;
     }
 
+    @Override
+    public Computer build() {
+        // офисному хватит и базовых требований
+        if (this.cpu == null || this.cpu.trim().isEmpty()) {
+            throw new IllegalStateException("проц нужен");
+        }
+        if (this.ramGb < MIN_OFFICE_RAM) {
+            throw new IllegalStateException("винда не потянет, надо минимум " + MIN_OFFICE_RAM + " гб");
+        }
+
+        return new Computer(cpu, gpu, ramGb, storageGb, cooling);
+    }
+
 }
