@@ -3,7 +3,7 @@ public class Computer {
     private final String gpu;
     private final int ramGb;
     private final int storageGb;
-    private final String coolingSystem;
+    private final CoolingType cooling; // ТУТ БЫЛА ОШИБКА, заменили String на CoolingType
 
     // конструктор протектед, тупо чтоб извне нельзя было через new создать
     protected Computer(String cpu, String gpu, int ramGb, int storageGb, CoolingType cooling) {
@@ -13,6 +13,7 @@ public class Computer {
         this.storageGb = storageGb;
         this.cooling = cooling;
     }
+
     // ту стринг чисто для удобного вывода в консоль
     @Override
     public String toString() {
