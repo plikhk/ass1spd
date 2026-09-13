@@ -32,7 +32,8 @@ public class Main {
                     .setGpu("RTX 3060")
                     .setRam(8) // тут спецом мало оперативы чтоб ошибка вылезла
                     .build();
-        } catch (IllegalStateException e) {
+        }
+        catch (IllegalStateException e) {
             System.out.println("поймали ошибку как и задумывалось: " + e.getMessage());
         }
     }
