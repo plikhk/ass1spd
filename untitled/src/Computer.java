@@ -13,4 +13,10 @@ public class Computer {
         this.storageGb = storageGb;
         this.cooling = cooling;
     }
+    // ту стринг чисто для удобного вывода в консоль
+    @Override
+    public String toString() {
+        return String.format("PC Build -> CPU: %s | GPU: %s | RAM: %dGB | Storage: %dGB | Cooling: %s",
+                cpu, gpu, ramGb, storageGb, cooling);
+    }
 }
