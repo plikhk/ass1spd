@@ -13,4 +13,8 @@ public abstract class ComputerBuilder{
         return this;
     }
 
+    public ComputerBuilder setGpu(String gpu) {
+        this.gpu = gpu;
+        return this;
+    }
 }
