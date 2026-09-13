@@ -12,4 +12,5 @@ public class Computer {
         this.ramGb = ramGb;
         this.storageGb = storageGb;
         this.cooling = cooling;
+    }
 }
