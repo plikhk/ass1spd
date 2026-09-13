@@ -17,4 +17,21 @@ public abstract class ComputerBuilder{
         this.gpu = gpu;
         return this;
     }
+
+    public ComputerBuilder setRam(int ramGb) {
+        this.ramGb = ramGb;
+        return this;
+    }
+    public ComputerBuilder setStorage(int storageGb) {
+        this.storageGb = storageGb;
+        return this;
+    }
+
+    public ComputerBuilder setCooling(CoolingType cooling) {
+        this.cooling = cooling;
+        return this;
+    }
+
+    // абстрактный билд, заставим потомков написать свою логику проверок
+    public abstract Computer build();
 }
